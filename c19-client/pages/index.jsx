@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Header />
-      <h1>Covid Info - Les actualités</h1>
+      <h1 className="text-center">Covid Info - Les actualités</h1>
       <Footer />
     </div>
   );
