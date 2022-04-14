@@ -1,12 +1,12 @@
+import React from "react";
 import Construct from "../components/layouts/Construct";
 
-function contact() {
+const vaccination = () => {
   return (
     <div>
-      <h1>Page contact</h1>
       <Construct />
     </div>
   );
-}
+};
 
-export default contact;
+export default vaccination;

@@ -1,13 +1,15 @@
 import React from "react";
+import Desease from "../components/Desease";
+import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
-import InWork from "../components/InWork";
 import Footer from "../components/Footer";
 
 const infoMaladie = () => {
   return (
-    <div className="container-fluid">
+    <div className={styles.container}>
       <Header />
-      <InWork />
+      <h1 className="text-center">Les infos sur la maladie</h1>
+      <Desease />
       <Footer />
     </div>
   );

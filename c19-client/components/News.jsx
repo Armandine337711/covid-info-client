@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import PostCard from "./PostCard";
 
 const News = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -18,14 +17,13 @@ const News = () => {
       .then((res) => res.json())
       .then((res) => {
         setPosts(res.data.attributes.posts.data);
-        setIsLoading(false);
       });
   }, []);
 
   return (
     <div className="mt-5">
       {posts.map((post, index) => {
-        return <PostCard post={post} key={index} />;
+        return <PostCard post={post.attributes} key={index} />;
       })}
     </div>
   );
